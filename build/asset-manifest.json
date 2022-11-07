@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Recommendation-Engine-for-E-Commerce-Platform/static/css/main.270f0666.css",
+    "main.js": "/Recommendation-Engine-for-E-Commerce-Platform/static/js/main.b6c3cb2f.js",
+    "static/js/787.62f059e6.chunk.js": "/Recommendation-Engine-for-E-Commerce-Platform/static/js/787.62f059e6.chunk.js",
+    "static/media/Amul Combo.png": "/Recommendation-Engine-for-E-Commerce-Platform/static/media/Amul Combo.e64200e779f0b5c23415.png",
+    "static/media/Amul Butter.jpeg": "/Recommendation-Engine-for-E-Commerce-Platform/static/media/Amul Butter.2e11c3228ceab43ea6a1.jpeg",
+    "static/media/Amul Milk .jpeg": "/Recommendation-Engine-for-E-Commerce-Platform/static/media/Amul Milk .53587b7466a95e0d4a57.jpeg",
+    "static/media/Amul Bread.png": "/Recommendation-Engine-for-E-Commerce-Platform/static/media/Amul Bread.c96b43c410759bfb7e8e.png",
+    "static/media/Kissan Jam.jpeg": "/Recommendation-Engine-for-E-Commerce-Platform/static/media/Kissan Jam.264e56b1995177dc4417.jpeg",
+    "static/media/Amul Cheese.jpeg": "/Recommendation-Engine-for-E-Commerce-Platform/static/media/Amul Cheese.5b55f7a506a4e855676d.jpeg",
+    "index.html": "/Recommendation-Engine-for-E-Commerce-Platform/index.html",
+    "main.270f0666.css.map": "/Recommendation-Engine-for-E-Commerce-Platform/static/css/main.270f0666.css.map",
+    "main.b6c3cb2f.js.map": "/Recommendation-Engine-for-E-Commerce-Platform/static/js/main.b6c3cb2f.js.map",
+    "787.62f059e6.chunk.js.map": "/Recommendation-Engine-for-E-Commerce-Platform/static/js/787.62f059e6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.270f0666.css",
+    "static/js/main.b6c3cb2f.js"
+  ]
+}
