@@ -1,0 +1,123 @@
+.App {
+  text-align: center;
+  background-color: white !important;
+}
+.cartcart {
+  font-size: 40px;
+}
+.cardincart {
+  border: 3px solid gray;
+  padding: 1em;
+  margin-top: 2em;
+  background-color: white;
+}
+.cart {
+  margin-top: 3em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+h3 {
+  color: white;
+}
+.cartcard .card {
+  width: 29rem;
+  background-color: white !important;
+}
+.cartlogologo {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.divv {
+  background-color: black;
+}
+.bgforcart {
+  padding-top: 3em;
+  background-color: #282c34;
+}
+.cartlogo {
+  font-size: 1.5em;
+  color:white;
+}
+.navbarlogo {
+  font-size: 1.8em;
+  color: palevioletred;
+}
+.homediv {
+  padding: 2em;
+  margin-top: 3em;
+  /*background-color: #282c34;*/
+}
+.homediv .row {
+  margin-top: 2em;
+}
+.homediv .row {
+  display: flex;
+  justify-content: center;
+}
+
+.appcssdiv {
+  background-color: #282c34;
+}
+.card {
+  width: 19rem;
+  height: 27rem;
+}
+.card-img-top {
+  height: 250px;
+}
+.inputlogin {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 0.5em;
+  border: 0;
+  padding: 3px;
+}
+.navbarlogin {
+  font-size: 90px;
+  color: palevioletred;
+}
+.buttonforlogin {
+  margin-top: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 10px;
+  background-color: #61dafb;
+  border: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  border: 9px solid palevioletred;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
