@@ -10,14 +10,16 @@ const Login = () =>{
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   // const [user, setUser] = useState([]);
 
   const handleLogin = (event) =>{
     event.preventDefault();
-    alert("Validating User...")
+    // alert("Validating User...")
     console.log(email)
     console.log(password)
-    
+    setIsLoading(true)
+
     fetch('database?action=validateUser', {
          redirect: "follow",
          method: 'POST',
@@ -33,12 +35,14 @@ const Login = () =>{
             if(data['status'] === 'user validated'){
               localStorage.setItem("userId",data.id)
               // alert(email+" is valid user.")
+              
               navigate("/home");
+
             }else{
               alert(data['status'])
             }
-
-            console.log(data['status'])
+            setIsLoading(false)
+            // console.log(data['status'])
          })
          .catch((err) => {
             console.log(err);
@@ -47,6 +51,7 @@ const Login = () =>{
   }
 
   return (
+
     <form onSubmit={handleLogin}>
     <div className="App-header">
       <div>
@@ -74,9 +79,14 @@ const Login = () =>{
           value={password}
         />
       </div>
-      <div>
+
+      {!isLoading ? 
+        <div>
           <button className="buttonforlogin" type="submit">Login</button>
-      </div>
+      </div> : <p>Validating...</p>
+
+      }
+
     </div>
     </form>
   );

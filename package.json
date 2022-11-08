@@ -2,7 +2,6 @@
   "name": "mini_proj4",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jay881.github.io/Recommendation-Engine-for-E-Commerce-Platform",
   "proxy": "http://localhost:5000/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -26,7 +25,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "engine": "python ./BackEndFlask/app.py"
   },
   "eslintConfig": {
     "extends": [

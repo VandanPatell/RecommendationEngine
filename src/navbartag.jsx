@@ -11,13 +11,13 @@ function navbartag() {
 
   return (
     <div>
-      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/home">
-            <TiShoppingCart className="navbarlogo"></TiShoppingCart>
+      <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/home">
+            <TiShoppingCart classNameName="navbarlogo"></TiShoppingCart>
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -25,18 +25,18 @@ function navbartag() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/home">
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="/home">
                   Home
                 </a>
               </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="/logout">
+              <li className="nav-item">
+                <a className="nav-link" href="/logout">
                   logout
                 </a>
               </li>
@@ -44,7 +44,7 @@ function navbartag() {
           </div>
           <div className="d-flex">
             <ul>
-              <a class="nav-link" href="/cart" >
+              <a className="nav-link" href="/cart" >
                 <BsCart2 className="cartlogo"></BsCart2>
               </a>
             </ul>

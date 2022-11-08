@@ -7,6 +7,7 @@ import ProductCard from "./ProductCard";
 import Preloader from "./Preloader";
 
 
+
 function Homee(){
 
   const navigate = useNavigate();
@@ -16,9 +17,11 @@ function Homee(){
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchData = () => {
+    setIsLoading(true)
     return fetch("database?action=getAllProducts")
           .then((response) => response.json())
-          .then((data) => setproducts(data['data']));
+          .then((data) => {setproducts(data['data']); setIsLoading(false);});
+
   }
 
   useEffect(() => {
@@ -35,15 +38,19 @@ function Homee(){
   if(!authenticated){
     navigate("/");
   }else{
+
+
+
+
     return (
     
     <div className="homediv d-flex flex-row align-items-stretch">
-      <div className="row">
+      <div className="row d-flex align-items-center justify-content-center">
 
-        {
-          products.map((pr)=>(
-            <ProductCard pid={pr.ProductId} name={pr.ProductName} price={pr.ProductPrice} img={pr.ProductImage}/>
-          ))
+        { !isLoading ?
+        products.map((pr, index)=>(
+            <ProductCard key={index} pid={pr.ProductId} name={pr.ProductName} price={pr.ProductPrice} img={pr.ProductImage}/>
+          ))  : <p className="loading-text">Loading...</p>
         }
         
 
@@ -53,5 +60,9 @@ function Homee(){
   }
 
 }
+// <p className="text-primary">Loading...</p>
+// products.map((pr, index)=>(
+//             <ProductCard key={index} pid={pr.ProductId} name={pr.ProductName} price={pr.ProductPrice} img={pr.ProductImage}/>
+//           ))
 
 export default Homee;

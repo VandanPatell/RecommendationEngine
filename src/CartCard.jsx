@@ -1,33 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import img11 from "./img/Amul Bread.png";
 
-const cust_id = localStorage.getItem('userId')
-
-
-function removeFromCart(pid){
-  let p_id = Number(pid)
-
-  fetch('database?action=removeFromCart', {
-         redirect: "follow",
-         method: 'POST',
-         body: JSON.stringify({
-            cust_id: cust_id,
-            p_id: p_id,
-         }),
-         
-      })
-         .then((res) => res.json())
-         .then((data) => {
-            alert(data['status'])
-            window.location.reload(false)
-         })
-         .catch((err) => {
-            console.log(err);
-         });
-
-}
 
 function CartCard(props){
+
+  const cust_id = localStorage.getItem('userId')
+  const [isLoading, setIsLoading] = useState(false);
+
+  function removeFromCart(pid){
+    let p_id = Number(pid)
+    setIsLoading(true)
+
+    fetch('database?action=removeFromCart', {
+           redirect: "follow",
+           method: 'POST',
+           body: JSON.stringify({
+              cust_id: cust_id,
+              p_id: p_id,
+           }),
+           
+        })
+           .then((res) => res.json())
+           .then((data) => {
+              // alert(data['status'])
+              setIsLoading(false)
+              window.location.reload(false)
+           })
+           .catch((err) => {
+              console.log(err);
+           });
+
+  }
+
+
+
 
 	return(
 		<div className="cartcard">
@@ -40,9 +46,16 @@ function CartCard(props){
               <div class="col">
                 <h5 class="card-title">{props.name}</h5>
                 <p class="card-text">Rs.{props.price}</p>
-                <button onClick={() => removeFromCart(props.pid)} class="btn btn-primary">
+
+                {
+                !isLoading ?
+                  <button onClick={() => removeFromCart(props.pid)} class="btn btn-primary">
                   Remove from Cart
-                </button>
+                </button> : <p>Processing...</p>
+                  
+                }
+
+
               </div>
             </div>
           </div>

@@ -24,11 +24,12 @@ const App = () => {
         <Route
           path="/Home"
           element={
-            <React.Fragment>
+            <>
               <Navbartagg></Navbartagg>
+
               <Homee></Homee>
 
-            </React.Fragment>
+            </>
           }
         ></Route>
         <Route
